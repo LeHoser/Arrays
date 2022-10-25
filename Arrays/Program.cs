@@ -62,6 +62,11 @@ namespace Arrays
 
         static void Fire()
         {
+            if (ammo[weapon] <= 0)
+            {
+                Reload();
+                return;
+            }
             ammo[weapon] += weaponShotCount[weapon];
         }
 
